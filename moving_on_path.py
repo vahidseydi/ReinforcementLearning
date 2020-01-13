@@ -69,11 +69,11 @@ class render:
     anim = animation.FuncAnimation(fig, self.animate, init_func=self.init,
                                  frames=len(self.ims), interval=40, blit=True)
     return anim
-  class path:
-    def __init__(self,x,grad=False):
-      f= lambda x:np.sin(3 * x)*.45+.55
-      df = lambda x:0.45* 3*np.cos(3*x)
-      self.x = x
-      self.f = f(x)
-      if grad:
-        self.df = df(x)
+class path:
+  def __init__(self,x,grad=False):
+    f= lambda x:np.sin(3 * x)*.45+.55
+    df = lambda x:0.45* 3*np.cos(3*x)
+    self.x = x
+    self.f = f(x)
+    if grad:
+      self.df = df(x)
